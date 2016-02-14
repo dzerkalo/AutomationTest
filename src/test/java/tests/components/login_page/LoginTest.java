@@ -1,4 +1,4 @@
-package tests;
+package tests.components.login_page;
 
 import framework.pageobject.PageObject;
 import framework.pageobject.page.HomePage;
@@ -10,6 +10,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Features;
 import ru.yandex.qatools.allure.annotations.Stories;
+import tests.BaseTest;
 
 import static org.testng.Assert.assertEquals;
 

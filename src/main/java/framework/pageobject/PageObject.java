@@ -1,9 +1,10 @@
 package framework.pageobject;
 
-import framework.utils.WebDriverFactory;
+import framework.utils.DriverManager;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.yandex.qatools.allure.annotations.Step;
@@ -13,8 +14,9 @@ public abstract class PageObject {
 	protected final WebDriverWait wait;
 
 	public PageObject() {
-		driver = WebDriverFactory.getInstance().getDriver();
+		driver = DriverManager.getDriver();
 		this.wait = new WebDriverWait(driver, 15, 250);
+		PageFactory.initElements(driver, this);
 	}
 
 	public Alert switchToAlert() {

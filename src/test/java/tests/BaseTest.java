@@ -2,9 +2,9 @@ package tests;
 
 import framework.pageobject.page.HomePage;
 import framework.pageobject.page.LoginPage;
+import framework.utils.DriverManager;
 import framework.utils.PropertyLoader;
 import framework.utils.Screenshooter;
-import framework.utils.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -12,6 +12,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import tests.components.login_page.LoginTest;
 
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
@@ -21,7 +22,9 @@ public abstract class BaseTest {
 
 	@BeforeClass
 	public void beforeClass() {
-		WebDriver driver = WebDriverFactory.getInstance().createDriver(PropertyLoader.getInstance().getBrowserName());
+		WebDriver driver = DriverFactory.getInstance().createDriver(PropertyLoader.getInstance().getBrowserName());
+
+		DriverManager.setWebDriver(driver);
 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -41,7 +44,7 @@ public abstract class BaseTest {
 
 	@AfterMethod
 	public void afterBaseMethod(ITestResult result) {
-		WebDriverFactory.getInstance().getDriver().manage().deleteAllCookies();
+		DriverManager.getDriver().manage().deleteAllCookies();
 
 		if (!result.isSuccess()) {
 			Screenshooter.getInstance().takeFullPageShotForFailedTests();
@@ -50,7 +53,7 @@ public abstract class BaseTest {
 
 	@AfterClass
 	public void afterSuite() {
-		WebDriverFactory.getInstance().getDriver().quit();
+		DriverManager.getDriver().quit();
 	}
 
 	protected void assertInstanceOf(Object obj, Class<?> clazz) {

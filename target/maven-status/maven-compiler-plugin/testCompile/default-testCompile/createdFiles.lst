@@ -1,4 +1,5 @@
 tests\BaseTest.class
-tests\EditProfileTest.class
-tests\HomePageTest.class
-tests\LoginTest.class
+tests\components\login_page\LoginTest.class
+tests\components\profile_page\EditProfileTest.class
+tests\DriverFactory.class
+tests\components\home_page\HomePageTest.class

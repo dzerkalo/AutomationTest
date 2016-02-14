@@ -16,6 +16,6 @@ public class Screenshooter {
 
 	@Attachment(value = "ScreenshotAttachment", type = "image/png")
 	public byte[] takeFullPageShotForFailedTests() {
-		return ((TakesScreenshot) WebDriverFactory.getInstance().getDriver()).getScreenshotAs(OutputType.BYTES);
+		return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
 	}
 }

@@ -1,4 +1,4 @@
-package framework.utils;
+package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,20 +7,18 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 /**
  * Factory to instantiate a WebDriver object. It returns an instance of the driver
  */
-public class WebDriverFactory {
+class DriverFactory {
 	/* Browsers constants */
 	private static final String CHROME = "chrome";
 	private static final String FIREFOX = "firefox";
 	private static final String CHROME_DRIVER_PATH = "src/main/resources/chrome/chromedriver.exe";
 
-	private WebDriver driver;
+	private final static DriverFactory INSTANCE = new DriverFactory();
 
-	private final static WebDriverFactory INSTANCE = new WebDriverFactory();
-
-	private WebDriverFactory() {
+	private DriverFactory() {
 	}
 
-	public static WebDriverFactory getInstance() {
+	static DriverFactory getInstance() {
 		return INSTANCE;
 	}
 
@@ -30,21 +28,15 @@ public class WebDriverFactory {
 	 * @param browser: String representing the browser name (e.g. "chrome" or "firefox")
 	 * @return WebDriver instance
 	 */
-	public WebDriver createDriver(String browser) {
+	WebDriver createDriver(String browser) {
 		if (CHROME.equalsIgnoreCase(browser)) {
 			setChromeDriver();
-			driver = new ChromeDriver();
+			return new ChromeDriver();
 		} else if (FIREFOX.equalsIgnoreCase(browser)) {
-			driver = new FirefoxDriver();
+			return new FirefoxDriver();
 		} else {
 			throw new UnsupportedOperationException(String.format("Browser %1$s is not supported!", browser));
 		}
-
-		return driver;
-	}
-
-	public WebDriver getDriver() {
-		return driver;
 	}
 
 	/**

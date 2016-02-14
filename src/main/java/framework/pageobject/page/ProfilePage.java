@@ -5,6 +5,7 @@ import framework.utils.ControlsHelper;
 import framework.utils.enums.TimeZone;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import ru.yandex.qatools.allure.annotations.Step;
 
@@ -20,6 +21,9 @@ public class ProfilePage extends BasePage {
 	private static final String CSS_ITEMS_PER_PAGE_DROPDOWN = "select[name='s_file_listing_page_size']";
 	private static final String CSS_SAVE_CHANGES_BUTTON = "#btnSaveChanges";
 
+	@FindBy(css = CSS_FIRST_NAME_FIELD)
+	private WebElement webFirstNameField;
+
 	@Step
 	public ProfilePage editProfile(ProfileData profile) {
 		fillProfileData(profile);
@@ -29,7 +33,7 @@ public class ProfilePage extends BasePage {
 	}
 
 	private void fillProfileData(ProfileData profile) {
-		ControlsHelper.fillTextBox(driver.findElement(By.cssSelector(CSS_FIRST_NAME_FIELD)), profile.getFirstName());
+		ControlsHelper.fillTextBox(webFirstNameField, profile.getFirstName());
 
 		ControlsHelper.fillTextBox(driver.findElement(By.cssSelector(CSS_LAST_NAME_FIELD)), profile.getLastName());
 
@@ -57,7 +61,7 @@ public class ProfilePage extends BasePage {
 	@Step
 	public ProfileData getProfileData() {
 		return new ProfileData.Builder() //
-				.setFirstName(driver.findElement(By.cssSelector(CSS_FIRST_NAME_FIELD)).getAttribute("value")) //
+				.setFirstName(webFirstNameField.getAttribute("value")) //
 				.setLastName(driver.findElement(By.cssSelector(CSS_LAST_NAME_FIELD)).getAttribute("value")) //
 				.setCompanyName(driver.findElement(By.cssSelector(CSS_COMPANY_NAME_FIELD)).getAttribute("value")) //
 				.setWebsite(driver.findElement(By.cssSelector(CSS_WEBSITE_FIELD)).getAttribute("value")) //

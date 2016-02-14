@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1455390322884" stop="1455390381627" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>regression : packages</name>
+    <title>regression : packages</title>
+    <test-cases>
+        <test-case start="1455390349321" stop="1455390367479" status="passed">
+            <name>canLoginWithValidCredentials</name>
+            <steps>
+                <step start="1455390349328" stop="1455390367387" status="passed">
+                    <name>loginAs[minchekov160@hotmail.com, Qw1111]</name>
+                    <attachments/>
+                    <steps>
+                        <step start="1455390349330" stop="1455390367387" status="passed">
+                            <name>tryLoginAs[minchekov160@hotmail.com, Qw1111]</name>
+                            <attachments/>
+                            <steps>
+                                <step start="1455390349349" stop="1455390359881" status="passed">
+                                    <name>login[minchekov160@hotmail.com, Qw1111]</name>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1455390367443" stop="1455390367479" status="passed">
+                    <name>getUsername</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Successfull login"/>
+                <label name="feature" value="Login Page"/>
+                <label name="host" value="Miha-PC"/>
+                <label name="thread" value="3904@Miha-PC.pool-1-thread-2(13)"/>
+            </labels>
+        </test-case>
+        <test-case start="1455390357184" stop="1455390357248" status="passed">
+            <name>canVerifyContentOfHomePage</name>
+            <steps>
+                <step start="1455390337118" stop="1455390357181" status="passed">
+                    <name>loginAs[minchekov160@hotmail.com, Qw1111]</name>
+                    <attachments/>
+                    <steps>
+                        <step start="1455390337121" stop="1455390357181" status="passed">
+                            <name>tryLoginAs[minchekov160@hotmail.com, Qw1111]</name>
+                            <attachments/>
+                            <steps>
+                                <step start="1455390340555" stop="1455390349545" status="passed">
+                                    <name>login[minchekov160@hotmail.com, Qw1111]</name>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1455390357186" stop="1455390357242" status="passed">
+                    <name>getAvailableFolders</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Content of Home Page"/>
+                <label name="feature" value="Home page"/>
+                <label name="host" value="Miha-PC"/>
+                <label name="thread" value="3904@Miha-PC.pool-1-thread-1(12)"/>
+            </labels>
+        </test-case>
+        <test-case start="1455390368567" stop="1455390371589" status="passed">
+            <name>canNotLoginWithIncorrectLogin</name>
+            <steps>
+                <step start="1455390368569" stop="1455390371546" status="passed">
+                    <name>tryLoginAs[minchekov160@hotmail.com, incorrect pasword]</name>
+                    <attachments/>
+                    <steps>
+                        <step start="1455390368583" stop="1455390369371" status="passed">
+                            <name>login[minchekov160@hotmail.com, incorrect pasword]</name>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Log in with invalid credentials"/>
+                <label name="feature" value="Login Page"/>
+                <label name="host" value="Miha-PC"/>
+                <label name="thread" value="3904@Miha-PC.pool-1-thread-2(13)"/>
+            </labels>
+        </test-case>
+        <test-case start="1455390372757" stop="1455390373168" status="passed">
+            <name>shouldAlertAppearsIfLogInWithEmptyCredentials[,Qw1111]</name>
+            <steps>
+                <step start="1455390372759" stop="1455390373125" status="passed">
+                    <name>login[, Qw1111]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1455390373127" stop="1455390373168" status="passed">
+                    <name>isAlertPresent</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Log in with empty credentials"/>
+                <label name="feature" value="Login Page"/>
+                <label name="host" value="Miha-PC"/>
+                <label name="thread" value="3904@Miha-PC.pool-1-thread-2(13)"/>
+            </labels>
+        </test-case>
+        <test-case start="1455390373029" stop="1455390381062" status="passed">
+            <name>canEditProfileWithValidValues[ProfileData{firstName='lI', lastName='mM', companyName='Iq', website='http://www.l.c', title='p', phone='0684592', timeZone=AFRICA_ABIDJAN, itemsPerPage=20, maxFileAge=0}]</name>
+            <steps>
+                <step start="1455390357065" stop="1455390373029" status="passed">
+                    <name>loginAs[minchekov160@hotmail.com, Qw1111]</name>
+                    <attachments/>
+                    <steps>
+                        <step start="1455390357069" stop="1455390373029" status="passed">
+                            <name>tryLoginAs[minchekov160@hotmail.com, Qw1111]</name>
+                            <attachments/>
+                            <steps>
+                                <step start="1455390357094" stop="1455390365552" status="passed">
+                                    <name>login[minchekov160@hotmail.com, Qw1111]</name>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1455390373060" stop="1455390376140" status="passed">
+                    <name>selectProfilePage</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1455390376141" stop="1455390378646" status="passed">
+                    <name>editProfile[ProfileData{firstName='lI', lastName='mM', companyName='Iq', website='http://www.l.c', title='p', phone='068...]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1455390378656" stop="1455390380855" status="passed">
+                    <name>selectProfilePage</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1455390380856" stop="1455390381034" status="passed">
+                    <name>getProfileData</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1455390381044" stop="1455390381062" status="passed">
+                    <name>getFullName</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Profile editing"/>
+                <label name="feature" value="Profile page"/>
+                <label name="host" value="Miha-PC"/>
+                <label name="thread" value="3904@Miha-PC.pool-1-thread-3(14)"/>
+            </labels>
+        </test-case>
+        <test-case start="1455390373807" stop="1455390374117" status="passed">
+            <name>shouldAlertAppearsIfLogInWithEmptyCredentials[minchekov160@hotmail.com,]</name>
+            <steps>
+                <step start="1455390373811" stop="1455390374079" status="passed">
+                    <name>login[minchekov160@hotmail.com, ]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1455390374081" stop="1455390374117" status="passed">
+                    <name>isAlertPresent</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Log in with empty credentials"/>
+                <label name="feature" value="Login Page"/>
+                <label name="host" value="Miha-PC"/>
+                <label name="thread" value="3904@Miha-PC.pool-1-thread-2(13)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

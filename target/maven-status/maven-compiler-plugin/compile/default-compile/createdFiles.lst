@@ -6,8 +6,8 @@ framework\pageobject\blocks\LeftMenuNavigationBlock.class
 framework\utils\Screenshooter.class
 framework\pageobject\page\ProfilePage.class
 framework\dataobjects\ProfileData$1.class
+framework\utils\DriverManager.class
 framework\utils\enums\TimeZone.class
-framework\utils\WebDriverFactory.class
 framework\dataobjects\ProfileData$Builder.class
 framework\utils\ControlsHelper.class
 framework\pageobject\blocks\LeftMenuNavigationBlock$LeftMenu.class

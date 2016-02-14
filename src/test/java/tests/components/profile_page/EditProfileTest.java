@@ -1,4 +1,4 @@
-package tests;
+package tests.components.profile_page;
 
 import framework.dataobjects.ProfileData;
 import framework.pageobject.page.ProfilePage;
@@ -7,6 +7,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Features;
 import ru.yandex.qatools.allure.annotations.Stories;
+import tests.BaseTest;
 
 import static framework.utils.enums.TimeZone.AFRICA_ABIDJAN;
 import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
