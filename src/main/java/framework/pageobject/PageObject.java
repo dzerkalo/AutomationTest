@@ -13,6 +13,7 @@ public abstract class PageObject {
 	protected final WebDriver driver;
 	protected final WebDriverWait wait;
 
+
 	public PageObject() {
 		driver = DriverManager.getInstance().getDriver();
 		this.wait = new WebDriverWait(driver, 15, 250);
@@ -24,6 +25,7 @@ public abstract class PageObject {
 			return driver.switchTo().alert();
 		} catch (NoAlertPresentException e) {
 			return null;
+
 		}
 	}
 
