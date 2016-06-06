@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
-    <file url="file://$PROJECT_DIR$/src/main/java/framework/dataobjects/ProfileData.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/framework/pageobject/page/ProfilePage.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/framework/utils/ControlsHelper.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/framework/utils/PropertyLoader.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/framework/utils/enums/TimeZone.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/chrome" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/chrome/chromedriver.exe" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/config.properties" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/test/java/tests/DriverFactory.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/test/java/tests/components/profile_page/EditProfileTest.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/test/resources" charset="UTF-8" />
+  <component name="Encoding">
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

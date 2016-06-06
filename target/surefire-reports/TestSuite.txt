@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 60.223 sec - in TestSuite
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 58.019 sec <<< FAILURE! - in TestSuite
+canVerifyContentOfHomePage(tests.components.home_page.HomePageTest)  Time elapsed: 0.205 sec  <<< FAILURE!
+java.lang.AssertionError: Sets differ: expected [File Sharing, Fun), test] but got [File Sharing, test, Fun), DirectoryName]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertEquals(Assert.java:808)
+	at org.testng.Assert.assertEquals(Assert.java:786)
+	at tests.components.home_page.HomePageTest.canVerifyContentOfHomePage(HomePageTest.java:28)
+

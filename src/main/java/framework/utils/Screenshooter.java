@@ -10,12 +10,12 @@ public class Screenshooter {
 	private Screenshooter() {
 	}
 
-	public static Screenshooter getInstance(){
+	public static Screenshooter getInstance() {
 		return INSTANCE;
 	}
 
 	@Attachment(value = "ScreenshotAttachment", type = "image/png")
-	public byte[] takeFullPageShotForFailedTests() {
-		return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
+	public byte[] takeScreenshot() {
+		return ((TakesScreenshot) DriverManager.getInstance().getDriver()).getScreenshotAs(OutputType.BYTES);
 	}
 }

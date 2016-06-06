@@ -10,11 +10,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.yandex.qatools.allure.annotations.Step;
 
 public abstract class PageObject {
-	protected WebDriver driver;
+	protected final WebDriver driver;
 	protected final WebDriverWait wait;
 
 	public PageObject() {
-		driver = DriverManager.getDriver();
+		driver = DriverManager.getInstance().getDriver();
 		this.wait = new WebDriverWait(driver, 15, 250);
 		PageFactory.initElements(driver, this);
 	}

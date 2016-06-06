@@ -22,10 +22,7 @@ public abstract class BaseTest {
 
 	@BeforeClass
 	public void beforeClass() {
-		WebDriver driver = DriverFactory.getInstance().createDriver(PropertyLoader.getInstance().getBrowserName());
-
-		DriverManager.setWebDriver(driver);
-
+		WebDriver driver = DriverManager.getInstance().createDriver(PropertyLoader.getInstance().getBrowserName());
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
@@ -43,17 +40,17 @@ public abstract class BaseTest {
 	}
 
 	@AfterMethod
-	public void afterBaseMethod(ITestResult result) {
-		DriverManager.getDriver().manage().deleteAllCookies();
+	public void afterMethod(ITestResult result) {
+		DriverManager.getInstance().getDriver().manage().deleteAllCookies();
 
 		if (!result.isSuccess()) {
-			Screenshooter.getInstance().takeFullPageShotForFailedTests();
+			Screenshooter.getInstance().takeScreenshot();
 		}
 	}
 
 	@AfterClass
-	public void afterSuite() {
-		DriverManager.getDriver().quit();
+	public void afterClass() {
+		DriverManager.getInstance().getDriver().quit();
 	}
 
 	protected void assertInstanceOf(Object obj, Class<?> clazz) {
@@ -63,5 +60,5 @@ public abstract class BaseTest {
 		if (!clazz.isInstance(obj)) {
 			Assert.fail(msg);
 		}
-	}
+}
 }
