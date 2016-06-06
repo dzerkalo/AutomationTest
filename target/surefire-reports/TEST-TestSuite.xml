@@ -1,74 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="20.783" tests="6" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="28.096" tests="6" errors="0" skipped="0" failures="1">
   <properties>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="c:\Program Files\Java\jdk1.8.0_72\jre\bin"/>
-    <property name="java.vm.version" value="25.72-b15"/>
-    <property name="browser" value="firefox"/>
-    <property name="user.country.format" value="UA"/>
-    <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="D:\Automating\Courses\CoursesQA_Auto\Projects\ProgKievUaTestProject\FirstTest"/>
-    <property name="java.vendor.url" value="http://java.oracle.com/"/>
-    <property name="path.separator" value=";"/>
-    <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="user.script" value=""/>
-    <property name="user.country" value="US"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.os.patch.level" value="Service Pack 1"/>
-    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\Automating\Courses\CoursesQA_Auto\Projects\ProgKievUaTestProject\FirstTest"/>
-    <property name="java.runtime.version" value="1.8.0_72-b15"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="c:\Program Files\Java\jdk1.8.0_72\jre\lib\endorsed"/>
-    <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\Miha\AppData\Local\Temp\"/>
-    <property name="line.separator" value="&#10;"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="user.variant" value=""/>
-    <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="d:\Automating\Installs\apache-maven-3.3.9\bin\m2.conf"/>
-    <property name="sun.jnu.encoding" value="Cp1251"/>
-    <property name="java.library.path" value="c:\Program Files\Java\jdk1.8.0_72\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;c:\Program Files\Java\jdk1.8.0_72\bin;d:\Automating\Installs\apache-maven-3.3.9\\bin;C:\Program Files\Diskeeper Corporation\ExpressCache\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;."/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.class.version" value="52.0"/>
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="6.1"/>
-    <property name="user.home" value="C:\Users\Miha"/>
-    <property name="user.timezone" value="Europe/Helsinki"/>
-    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
-    <property name="java.specification.version" value="1.8"/>
-    <property name="file.encoding" value="Cp1251"/>
-    <property name="user.name" value="Miha"/>
-    <property name="java.class.path" value="d:\Automating\Installs\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar"/>
-    <property name="java.vm.specification.version" value="1.8"/>
-    <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="c:\Program Files\Java\jdk1.8.0_72\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test -Dbrowser=firefox"/>
-    <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="user.language" value="en"/>
-    <property name="user.language.format" value="uk"/>
-    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
-    <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_72"/>
-    <property name="java.ext.dirs" value="c:\Program Files\Java\jdk1.8.0_72\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="c:\Program Files\Java\jdk1.8.0_72\jre\lib\resources.jar;c:\Program Files\Java\jdk1.8.0_72\jre\lib\rt.jar;c:\Program Files\Java\jdk1.8.0_72\jre\lib\sunrsasign.jar;c:\Program Files\Java\jdk1.8.0_72\jre\lib\jsse.jar;c:\Program Files\Java\jdk1.8.0_72\jre\lib\jce.jar;c:\Program Files\Java\jdk1.8.0_72\jre\lib\charsets.jar;c:\Program Files\Java\jdk1.8.0_72\jre\lib\jfr.jar;c:\Program Files\Java\jdk1.8.0_72\jre\classes"/>
-    <property name="sun.stderr.encoding" value="cp866"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="d:\Automating\Installs\apache-maven-3.3.9"/>
-    <property name="file.separator" value="\"/>
-    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
-    <property name="sun.cpu.endian" value="little"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="sun.stdout.encoding" value="cp866"/>
+    <property name="JOB_NAME" value="tests_chrome"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="windows_tracing_logfile" value="C:\BVTBin\Tests\installpackage\csilogfile.log"/>
+    <property name="NUMBER_OF_PROCESSORS" value="4"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="JENKINS_HOME" value="C:\Users\Miha\.jenkins"/>
+    <property name="HUDSON_SERVER_COOKIE" value="533ed62493a19bf3"/>
+    <property name="POM_ARTIFACTID" value="FirstTest"/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="sun.boot.class.path" value="c:\Program Files\Java\jdk1.8.0_72\jre\lib\resources.jar;c:\Program Files\Java\jdk1.8.0_72\jre\lib\rt.jar;c:\Program Files\Java\jdk1.8.0_72\jre\lib\sunrsasign.jar;c:\Program Files\Java\jdk1.8.0_72\jre\lib\jsse.jar;c:\Program Files\Java\jdk1.8.0_72\jre\lib\jce.jar;c:\Program Files\Java\jdk1.8.0_72\jre\lib\charsets.jar;c:\Program Files\Java\jdk1.8.0_72\jre\lib\jfr.jar;c:\Program Files\Java\jdk1.8.0_72\jre\classes"/>
+    <property name="EXECUTOR_NUMBER" value="0"/>
+    <property name="user.country.format" value="UA"/>
     <property name="sun.desktop" value="windows"/>
+    <property name="PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="POM_DISPLAYNAME" value="FirstTest"/>
+    <property name="NODE_LABELS" value="master"/>
+    <property name="TEMP" value="C:\Users\Miha\AppData\Local\Temp"/>
+    <property name="java.runtime.version" value="1.8.0_72-b15"/>
+    <property name="user.name" value="Miha"/>
+    <property name="user.language.format" value="uk"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="CommonProgramW6432" value="C:\Program Files\Common Files"/>
+    <property name="ProgramFiles" value="C:\Program Files"/>
+    <property name="PROMPT" value="$P$G"/>
+    <property name="user.language" value="en"/>
+    <property name="BUILD_DISPLAY_NAME" value="#8"/>
+    <property name="sun.boot.library.path" value="c:\Program Files\Java\jdk1.8.0_72\jre\bin"/>
+    <property name="LOCALAPPDATA" value="C:\Users\Miha\AppData\Local"/>
+    <property name="java.version" value="1.8.0_72"/>
+    <property name="PROCESSOR_LEVEL" value="6"/>
+    <property name="user.timezone" value="Europe/Helsinki"/>
+    <property name="USERNAME" value="Miha"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="NODE_NAME" value="master"/>
+    <property name="java.endorsed.dirs" value="c:\Program Files\Java\jdk1.8.0_72\jre\lib\endorsed"/>
+    <property name="BUILD_ID" value="8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="HOMEDRIVE" value="C:"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="=::" value="::\"/>
+    <property name="ESET_OPTIONS" value="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               "/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="user.country" value="US"/>
+    <property name="ALLUSERSPROFILE" value="C:\ProgramData"/>
+    <property name="java.home" value="c:\Program Files\Java\jdk1.8.0_72\jre"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="os.version" value="6.1"/>
+    <property name="POM_VERSION" value="1.0-SNAPSHOT"/>
+    <property name="TMP" value="C:\Users\Miha\AppData\Local\Temp"/>
+    <property name="path.separator" value=";"/>
+    <property name="COMMANDER_DRIVE" value="C:"/>
+    <property name="java.vm.version" value="25.72-b15"/>
+    <property name="user.variant" value=""/>
+    <property name="CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="FP_NO_HOST_CHECK" value="NO"/>
+    <property name="JAVA_HOME" value="c:\Program Files\Java\jdk1.8.0_72"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="CommonProgramFiles" value="C:\Program Files\Common Files"/>
+    <property name="ComSpec" value="C:\Windows\system32\cmd.exe"/>
+    <property name="HOMEPATH" value="\Users\Miha"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="POM_PACKAGING" value="jar"/>
+    <property name="COMPUTERNAME" value="MIHA-PC"/>
+    <property name="user.script" value=""/>
+    <property name="POM_GROUPID" value="first-test"/>
+    <property name="user.home" value="C:\Users\Miha"/>
+    <property name="PUBLIC" value="C:\Users\Public"/>
+    <property name="BUILD_TAG" value="jenkins-tests_chrome-8"/>
+    <property name="JENKINS_SERVER_COOKIE" value="533ed62493a19bf3"/>
+    <property name="HUDSON_URL" value="http://localhost:8080/"/>
+    <property name="ProgramData" value="C:\ProgramData"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="USERPROFILE" value="C:\Users\Miha"/>
+    <property name="CLASSPATH" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="java.library.path" value="c:\Program Files\Java\jdk1.8.0_72\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\Automating\Installs\apache-maven-3.3.9/bin;c:\Program Files\Java\jdk1.8.0_72/bin;c:\Program Files\Java\jdk1.8.0_72/bin;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;c:\Program Files\Java\jdk1.8.0_72\bin;d:\Automating\Installs\apache-maven-3.3.9\\bin;C:\Program Files\Diskeeper Corporation\ExpressCache\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;."/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="APPDATA" value="C:\Users\Miha\AppData\Roaming"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="maven.home" value="D:\Automating\Installs\apache-maven-3.3.9"/>
+    <property name="java.class.path" value="C:\Users\Miha\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven31-agent-1.5.jar;d:\Automating\Installs\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;d:\Automating\Installs\apache-maven-3.3.9/conf/logging"/>
+    <property name="sun.java.command" value="jenkins.maven3.agent.Maven31Main d:\Automating\Installs\apache-maven-3.3.9 C:\Users\Miha\.jenkins\war\WEB-INF\lib\remoting-2.53.2.jar C:\Users\Miha\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven31-interceptor-1.5.jar C:\Users\Miha\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.5.jar 51429"/>
+    <property name="Path" value="c:\Program Files\Java\jdk1.8.0_72/bin;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;c:\Program Files\Java\jdk1.8.0_72\bin;d:\Automating\Installs\apache-maven-3.3.9\\bin;C:\Program Files\Diskeeper Corporation\ExpressCache\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PROCESSOR_ARCHITECTURE" value="AMD64"/>
+    <property name="PATH+JDK" value="c:\Program Files\Java\jdk1.8.0_72/bin"/>
+    <property name="PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 61 Stepping 4, GenuineIntel"/>
+    <property name="SESSIONNAME" value="Console"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="M2_HOME" value="d:\Automating\Installs\apache-maven-3.3.9"/>
+    <property name="=D:" value="d:\Automating\Installs"/>
+    <property name="java.io.tmpdir" value="C:\Users\Miha\AppData\Local\Temp\"/>
+    <property name="OS" value="Windows_NT"/>
+    <property name="HUDSON_HOME" value="C:\Users\Miha\.jenkins"/>
+    <property name="PATH+MAVEN" value="d:\Automating\Installs\apache-maven-3.3.9/bin"/>
+    <property name="ProgramFiles(x86)" value="C:\Program Files (x86)"/>
+    <property name="BUILD_URL" value="http://localhost:8080/job/tests_chrome/8/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="SystemRoot" value="C:\Windows"/>
+    <property name="windows_tracing_flags" value="3"/>
+    <property name="java.ext.dirs" value="c:\Program Files\Java\jdk1.8.0_72\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="user.dir" value="d:\Automating\Courses\CoursesQA_Auto\Projects\ProgKievUaTestProject\FirstTest"/>
+    <property name="JOB_URL" value="http://localhost:8080/job/tests_chrome/"/>
+    <property name="LOGONSERVER" value="\\MIHA-PC"/>
+    <property name="browser" value="chrome"/>
+    <property name="USERDOMAIN" value="Miha-PC"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="MAVEN_HOME" value="d:\Automating\Installs\apache-maven-3.3.9"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="BUILD_NUMBER" value="8"/>
+    <property name="JENKINS_URL" value="http://localhost:8080/"/>
+    <property name="PROCESSOR_REVISION" value="3d04"/>
+    <property name="ProgramW6432" value="C:\Program Files"/>
+    <property name="windir" value="C:\Windows"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="SystemDrive" value="C:"/>
+    <property name="maven3.interceptor" value="C:\Users\Miha\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven31-interceptor-1.5.jar"/>
+    <property name="WORKSPACE" value="C:\Users\Miha\.jenkins\jobs\tests_chrome\workspace"/>
+    <property name="maven3.interceptor.common" value="C:\Users\Miha\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.5.jar"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="COMMANDER_PATH" value="C:\Program Files (x86)\Total Commander"/>
+    <property name="PSModulePath" value="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\"/>
+    <property name="COMMANDER_INI" value="C:\Program Files (x86)\Total Commander\wincmd.ini"/>
   </properties>
-  <testcase name="canVerifyContentOfHomePage" classname="tests.components.home_page.HomePageTest" time="0.067"/>
-  <testcase name="canLoginWithValidCredentials" classname="tests.components.login_page.LoginTest" time="10.298"/>
-  <testcase name="canNotLoginWithIncorrectLogin" classname="tests.components.login_page.LoginTest" time="3.022"/>
-  <testcase name="shouldAlertAppearsIfLogInWithEmptyCredentials" classname="tests.components.login_page.LoginTest" time="0.139"/>
-  <testcase name="shouldAlertAppearsIfLogInWithEmptyCredentials" classname="tests.components.login_page.LoginTest" time="0.311"/>
-  <testcase name="canEditProfileWithValidValues" classname="tests.components.profile_page.EditProfileTest" time="7.257"/>
+  <testcase name="canLoginWithValidCredentials" classname="tests.components.login_page.LoginTest" time="20.166"/>
+  <testcase name="canVerifyContentOfHomePage" classname="tests.components.home_page.HomePageTest" time="0.205">
+    <failure message="Sets differ: expected [File Sharing, Fun), test] but got [File Sharing, test, Fun), DirectoryName]" type="java.lang.AssertionError">java.lang.AssertionError: Sets differ: expected [File Sharing, Fun), test] but got [File Sharing, test, Fun), DirectoryName]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertEquals(Assert.java:808)
+	at org.testng.Assert.assertEquals(Assert.java:786)
+	at tests.components.home_page.HomePageTest.canVerifyContentOfHomePage(HomePageTest.java:28)
+</failure>
+  </testcase>
+  <testcase name="canNotLoginWithIncorrectLogin" classname="tests.components.login_page.LoginTest" time="1.746"/>
+  <testcase name="shouldAlertAppearsIfLogInWithEmptyCredentials" classname="tests.components.login_page.LoginTest" time="0.567"/>
+  <testcase name="shouldAlertAppearsIfLogInWithEmptyCredentials" classname="tests.components.login_page.LoginTest" time="0.362"/>
+  <testcase name="canEditProfileWithValidValues" classname="tests.components.profile_page.EditProfileTest" time="5.412"/>
 </testsuite>

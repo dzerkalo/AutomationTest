@@ -16,6 +16,11 @@ public class HomePage extends BasePage {
 	private static final String CSS_LISTING_LOADED_ELEMENT = "#listing_loaded";
 	private static final String CSS_FILE_LISTING_AREA = "#bizFileListing";
 	private static final String CSS_FOLDER = ".dirEntry";
+	private static final String CSS_FILE_ENTRY_TEMPLATE = ".fileEntry[bdg-name='%1$s']";
+	private static final String CSS_COMMENTS_BUTTON = ".fileCommentsButton a";
+	private static final String CSS_COMMENTS_INPUT = ".openComments input[type='text']";
+	private static final String CSS_ADD_COMMENT_BUTTON = ".commentAddButton";
+	private static final String CSS_COMMENT_ADDED_MESSAGE = ".openComments .bizOk";
 
 	public HomePage() {
 		//wait until content is loaded
@@ -30,5 +35,21 @@ public class HomePage extends BasePage {
 		return foldersList.stream()
 				.map(element -> element.getAttribute("bdg-name"))
 				.collect(Collectors.toSet());
+	}
+
+	public void addCommentForFile(String filename, String comment) {
+		WebElement fileEntry = driver.findElement(By.cssSelector(String.format(CSS_FILE_ENTRY_TEMPLATE, filename)));
+		fileEntry.findElement(By.cssSelector(CSS_COMMENTS_BUTTON)).click();
+
+		WebElement commentInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(CSS_COMMENTS_INPUT)));
+		commentInput.sendKeys(comment);
+		fileEntry.findElement(By.cssSelector(CSS_ADD_COMMENT_BUTTON)).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(CSS_COMMENT_ADDED_MESSAGE)));
+	}
+
+	public String getCommentMessageForFile(String filename) {
+		WebElement fileEntry = driver.findElement(By.cssSelector(String.format(CSS_FILE_ENTRY_TEMPLATE, filename)));
+		return fileEntry.findElement(By.cssSelector(CSS_COMMENT_ADDED_MESSAGE)).getText();
 	}
 }

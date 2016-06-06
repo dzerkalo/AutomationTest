@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-regression">
-              <span class="suite-name border-passed">regression</span>
+              <span class="suite-name border-failed">regression</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-regression" class="hide-methods failed suite-regression"> (hide)</a> <!-- hide-methods failed suite-regression -->
+                      <a href="#" panel-name="suite-regression" class="show-methods failed suite-regression"> (show)</a> <!-- show-methods failed suite-regression -->
+                    </span>
+                    <div class="method-list-content failed suite-regression">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="tests.components.home_page.HomePageTest" hash-for-method="canVerifyContentOfHomePage">canVerifyContentOfHomePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-regression -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +115,7 @@
                     <div class="method-list-content passed suite-regression">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="tests.components.profile_page.EditProfileTest" hash-for-method="canEditProfileWithValidValues(ProfileData{firstName=&#039;lI&#039;, lastName=&#039;mM&#039;, companyName=&#039;Iq&#039;, website=&#039;http://www.l.c&#039;, title=&#039;p&#039;, ph...)">canEditProfileWithValidValues(ProfileData{firstName='lI', lastName='mM', companyName='Iq', website='http://www.l.c', title='p', ph...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="tests.components.profile_page.EditProfileTest" hash-for-method="canEditProfileWithValidValues(ProfileData{firstName=&#039;KZ&#039;, lastName=&#039;Yc&#039;, companyName=&#039;qg&#039;, website=&#039;http://www.l.c&#039;, title=&#039;q&#039;, ph...)">canEditProfileWithValidValues(ProfileData{firstName='KZ', lastName='Yc', companyName='qg', website='http://www.l.c', title='q', ph...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -112,11 +126,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-regression" title="tests.components.login_page.LoginTest" hash-for-method="canNotLoginWithIncorrectLogin">canNotLoginWithIncorrectLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="tests.components.home_page.HomePageTest" hash-for-method="canVerifyContentOfHomePage">canVerifyContentOfHomePage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -141,6 +150,44 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-regression" class="panel regression">
+          <div class="suite-regression-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.components.home_page.HomePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="canVerifyContentOfHomePage">
+                  </a> <!-- canVerifyContentOfHomePage -->
+                  <span class="method-name">canVerifyContentOfHomePage</span>
+                  <div class="stack-trace">java.lang.AssertionError: Sets differ: expected [File Sharing, Fun), test] but got [File Sharing, test, Fun), DirectoryName]
+	at tests.components.home_page.HomePageTest.canVerifyContentOfHomePage(HomePageTest.java:28)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 13 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-regression-class-failed -->
+          <div class="suite-regression-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.components.profile_page.EditProfileTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="canEditProfileWithValidValues(ProfileData{firstName=&#039;KZ&#039;, lastName=&#039;Yc&#039;, companyName=&#039;qg&#039;, website=&#039;http://www.l.c&#039;, title=&#039;q&#039;, ph...)">
+                  </a> <!-- canEditProfileWithValidValues(ProfileData{firstName='KZ', lastName='Yc', companyName='qg', website='http://www.l.c', title='q', ph...) -->
+                  <span class="method-name">canEditProfileWithValidValues</span>
+                  <span class="parameters">(ProfileData{firstName='KZ', lastName='Yc', companyName='qg', website='http://www.l.c', title='q', phone='4549693', timeZone=AFRICA_ABIDJAN, itemsPerPage=20, maxFileAge=0})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-regression-class-passed -->
           <div class="suite-regression-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -175,37 +222,6 @@
                   </a> <!-- shouldAlertAppearsIfLogInWithEmptyCredentials(, Qw1111) -->
                   <span class="method-name">shouldAlertAppearsIfLogInWithEmptyCredentials</span>
                   <span class="parameters">(, Qw1111)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-regression-class-passed -->
-          <div class="suite-regression-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.components.profile_page.EditProfileTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="canEditProfileWithValidValues(ProfileData{firstName=&#039;lI&#039;, lastName=&#039;mM&#039;, companyName=&#039;Iq&#039;, website=&#039;http://www.l.c&#039;, title=&#039;p&#039;, ph...)">
-                  </a> <!-- canEditProfileWithValidValues(ProfileData{firstName='lI', lastName='mM', companyName='Iq', website='http://www.l.c', title='p', ph...) -->
-                  <span class="method-name">canEditProfileWithValidValues</span>
-                  <span class="parameters">(ProfileData{firstName='lI', lastName='mM', companyName='Iq', website='http://www.l.c', title='p', phone='0684592', timeZone=AFRICA_ABIDJAN, itemsPerPage=20, maxFileAge=0})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-regression-class-passed -->
-          <div class="suite-regression-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.components.home_page.HomePageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="canVerifyContentOfHomePage">
-                  </a> <!-- canVerifyContentOfHomePage -->
-                  <span class="method-name">canVerifyContentOfHomePage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -271,32 +287,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'canLoginWithValidCredentials')
 data.setCell(0, 2, 'tests.components.login_page.LoginTest')
-data.setCell(0, 3, 18201);
+data.setCell(0, 3, 20187);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'canEditProfileWithValidValues')
 data.setCell(1, 2, 'tests.components.profile_page.EditProfileTest')
-data.setCell(1, 3, 8033);
+data.setCell(1, 3, 12880);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'canNotLoginWithIncorrectLogin')
 data.setCell(2, 2, 'tests.components.login_page.LoginTest')
-data.setCell(2, 3, 3023);
+data.setCell(2, 3, 2009);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'shouldAlertAppearsIfLogInWithEmptyCredentials')
 data.setCell(3, 2, 'tests.components.login_page.LoginTest')
-data.setCell(3, 3, 411);
+data.setCell(3, 3, 568);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'shouldAlertAppearsIfLogInWithEmptyCredentials')
 data.setCell(4, 2, 'tests.components.login_page.LoginTest')
-data.setCell(4, 3, 311);
+data.setCell(4, 3, 361);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'canVerifyContentOfHomePage')
 data.setCell(5, 2, 'tests.components.home_page.HomePageTest')
-data.setCell(5, 3, 66);
+data.setCell(5, 3, 192);
 window.suiteTableData['regression']= { tableData: data, tableDiv: 'times-div-regression'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 30 seconds</span>
+              <span class="suite-total-time">Total running time: 36 seconds</span>
               <div id="times-div-regression">
               </div> <!-- times-div-regression -->
             </div> <!-- times-div -->
@@ -329,13 +345,6 @@ return data;
               </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.components.home_page.HomePageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">tests.components.profile_page.EditProfileTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
@@ -344,126 +353,144 @@ return data;
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.components.home_page.HomePageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeBaseMethod(public void tests.components.home_page.HomePageTest.canVerifyContentOfHomePage())</span>
-                <span class="method-start">13744 ms</span>
-              </div> <!-- configuration-method before -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">2 ms</span>
+              </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.components.login_page.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeBaseMethod(public void tests.components.login_page.LoginTest.canLoginWithValidCredentials())</span>
-                <span class="method-start">22608 ms</span>
+                <span class="method-start">8024 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.components.home_page.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">26360 ms</span>
+                <span class="method-name">beforeBaseMethod(public void tests.components.home_page.HomePageTest.canVerifyContentOfHomePage())</span>
+                <span class="method-start">8521 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">canLoginWithValidCredentials</span>
-                <span class="method-start">26362 ms</span>
-              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.components.profile_page.EditProfileTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeBaseMethod(public void tests.components.profile_page.EditProfileTest.canEditProfileWithValidValues(framework.da...)</span>
-                <span class="method-start">31319 ms</span>
+                <span class="method-start">8725 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.components.login_page.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">14553 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">canLoginWithValidCredentials</span>
+                <span class="method-start">14553 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=canLoginWithValidCredentials status=SUCCESS method=LoginTest.canLoginWithValidCrede...)</span>
+                <span class="method-start">34750 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.components.home_page.HomePageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">canVerifyContentOfHomePage</span>
-                <span class="method-start">34265 ms</span>
+                <span class="method-start">35196 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterBaseMethod([TestResult name=canVerifyContentOfHomePage status=SUCCESS method=HomePageTest.canVerifyContentOfHom...)</span>
-                <span class="method-start">34335 ms</span>
+                <span class="method-name">afterMethod([TestResult name=canVerifyContentOfHomePage status=FAILURE method=HomePageTest.canVerifyContentOfHom...)</span>
+                <span class="method-start">35406 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.components.login_page.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeBaseMethod(public void tests.components.login_page.LoginTest.canNotLoginWithIncorrectLogin())</span>
+                <span class="method-start">37874 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.components.home_page.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class after">
-                <span class="method-name">afterSuite</span>
-                <span class="method-start">34353 ms</span>
+                <span class="method-name">afterClass</span>
+                <span class="method-start">39103 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.components.login_page.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">afterBaseMethod([TestResult name=canLoginWithValidCredentials status=SUCCESS method=LoginTest.canLoginWithValidCrede...)</span>
-                <span class="method-start">44564 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeBaseMethod(public void tests.components.login_page.LoginTest.canNotLoginWithIncorrectLogin())</span>
-                <span class="method-start">44579 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">45650 ms</span>
+                <span class="method-start">39877 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">canNotLoginWithIncorrectLogin</span>
-                <span class="method-start">45650 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterBaseMethod([TestResult name=canNotLoginWithIncorrectLogin status=SUCCESS method=LoginTest.canNotLoginWithIncorr...)</span>
-                <span class="method-start">48673 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeBaseMethod(public void tests.components.login_page.LoginTest.shouldAlertAppearsIfLogInWithEmptyCredentials(java...)</span>
-                <span class="method-start">48683 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">49840 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">shouldAlertAppearsIfLogInWithEmptyCredentials(, Qw1111)</span>
-                <span class="method-start">49841 ms</span>
+                <span class="method-start">39877 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.components.profile_page.EditProfileTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">canEditProfileWithValidValues(ProfileData{firstName='lI', lastName='mM', companyName='Iq', website='http://www.l.c', title='p', ph...)</span>
-                <span class="method-start">50113 ms</span>
+                <span class="method-name">canEditProfileWithValidValues(ProfileData{firstName='KZ', lastName='Yc', companyName='qg', website='http://www.l.c', title='q', ph...)</span>
+                <span class="method-start">40138 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.components.login_page.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
-                <span class="method-name">afterBaseMethod([TestResult name=shouldAlertAppearsIfLogInWithEmptyCredentials status=SUCCESS method=LoginTest.shoul...)</span>
-                <span class="method-start">50253 ms</span>
+                <span class="method-name">afterMethod([TestResult name=canNotLoginWithIncorrectLogin status=SUCCESS method=LoginTest.canNotLoginWithIncorr...)</span>
+                <span class="method-start">41887 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeBaseMethod(public void tests.components.login_page.LoginTest.shouldAlertAppearsIfLogInWithEmptyCredentials(java...)</span>
-                <span class="method-start">50265 ms</span>
+                <span class="method-start">42223 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">50890 ms</span>
+                <span class="method-start">43117 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">shouldAlertAppearsIfLogInWithEmptyCredentials(, Qw1111)</span>
+                <span class="method-start">43118 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=shouldAlertAppearsIfLogInWithEmptyCredentials status=SUCCESS method=LoginTest.shoul...)</span>
+                <span class="method-start">43686 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeBaseMethod(public void tests.components.login_page.LoginTest.shouldAlertAppearsIfLogInWithEmptyCredentials(java...)</span>
+                <span class="method-start">44205 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">47606 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">shouldAlertAppearsIfLogInWithEmptyCredentials(minchekov160@hotmail.com, )</span>
-                <span class="method-start">50890 ms</span>
+                <span class="method-start">47606 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterBaseMethod([TestResult name=shouldAlertAppearsIfLogInWithEmptyCredentials status=SUCCESS method=LoginTest.shoul...)</span>
-                <span class="method-start">51202 ms</span>
+                <span class="method-name">afterMethod([TestResult name=shouldAlertAppearsIfLogInWithEmptyCredentials status=SUCCESS method=LoginTest.shoul...)</span>
+                <span class="method-start">47968 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
-                <span class="method-name">afterSuite</span>
-                <span class="method-start">51213 ms</span>
+                <span class="method-name">afterClass</span>
+                <span class="method-start">48405 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.components.profile_page.EditProfileTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
-                <span class="method-name">afterBaseMethod([TestResult name=canEditProfileWithValidValues status=SUCCESS method=EditProfileTest.canEditProfileW...)</span>
-                <span class="method-start">58147 ms</span>
+                <span class="method-name">afterMethod([TestResult name=canEditProfileWithValidValues status=SUCCESS method=EditProfileTest.canEditProfileW...)</span>
+                <span class="method-start">53018 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
-                <span class="method-name">afterSuite</span>
-                <span class="method-start">58154 ms</span>
+                <span class="method-name">afterClass</span>
+                <span class="method-start">53961 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
